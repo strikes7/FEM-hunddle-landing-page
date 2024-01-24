@@ -1,0 +1,12 @@
+@use "../abstract/" as *;
+
+body {
+  display: flex;
+  min-height: 100dvh;
+  margin:0;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $clr-violet-100;
+  font-family: $ff-primary;
+}

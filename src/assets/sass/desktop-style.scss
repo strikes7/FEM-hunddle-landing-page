@@ -1,0 +1,55 @@
+@use "abstract/" as *;
+body{
+    background-image:url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    width: 80% ;
+    max-width: toRem(1270);
+    margin-block-start: toRem(62);
+    grid-template-columns: 55% 1fr;
+    grid-template-rows: repeat(3, min-content) 1fr 1fr;
+    grid-column-gap: 3.5rem;
+}
+
+.site{
+    &__logo{
+        margin-block-end: 5rem;
+        
+        grid-column: span 2;
+        & > img{
+            height: 3.125rem;
+        }
+    }
+    
+    &__title{
+        margin-block-start: 2.5rem;
+        font-size: $fs-800;
+        text-align: start;
+    }
+
+    &__text{
+        grid-column: 2;
+        text-align: start;
+        font-size: $fs-600;
+        margin-block-end: 1.2rem;
+    }
+}
+
+.hero-image{
+    grid-row: span 3;
+    margin-block: 0;
+}
+
+.social-media{
+    grid-column: 2;
+    margin-block: 1rem 2.5rem;
+    margin-inline: auto 0;
+}
+
+.register-to-site{
+    margin-inline-start: 0;
+    padding-block: 1.2rem;
+}
